@@ -96,7 +96,8 @@ export default function App() {
     <main>
       {isNavigating ? (
         <div className="flex justify-center items-center h-screen w-screen">
-          <div className="loading-spinner"></div>
+          {/* <div className="loading-spinner"></div> */}
+          <div className="w-12 h-12 border-4 border-black dark:border-white border-b-transparent rounded-full animate-spin"></div>
         </div>
       ) : (
         <Outlet />

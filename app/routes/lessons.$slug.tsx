@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+import LessonEnquiryForm from "~/components/LessonEnquiryForm";
 
 export const meta: MetaFunction = ({ data }) => {
   const lesson = data as Lesson | undefined;
@@ -69,16 +70,17 @@ export default function Lesson() {
       </header>
 
       <section>
-        <div className="grid grid-cols-1 gap-4 m-2">
+        <div className="grid md:grid-cols-2 gap-4 m-2">
           <Card>
             <CardHeader>
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.subtitle}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>{lesson.content}</p>
+              <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p>
             </CardContent>
           </Card>
+          <LessonEnquiryForm />
         </div>
       </section>
     </main>

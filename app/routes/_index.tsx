@@ -13,14 +13,6 @@ import {
   CardFooter,
 } from "~/components/ui/card";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "~/components/ui/carousel";
-
 export const meta: MetaFunction = () => [
   { title: "bobteachesmusic lessons Blackburn" },
   {
@@ -79,34 +71,6 @@ export default function Home() {
               </p>
               <p className="pb-4">Just getting started? want some guidance?</p>
               <p>Want to learn the songs you love?</p>
-              {/* <div className="flex justify-center items-center p-4">
-                <div className="w-[70%]">
-                  <Carousel className="overflow-hidden w-full">
-                    <CarouselContent>
-                      <CarouselItem>
-                        &quot;Learning is always fun, Bob likes to mix things
-                        up, generally we just have a really great time. Lessons
-                        pass so quickly but by the end I feel certain my skills
-                        have increased&quot;
-                      </CarouselItem>
-                      <CarouselItem>
-                        &quot;I have been a pupil of Bob for some time and I can
-                        hightly recommend his musicianship and teching
-                        techniques. He is very a knowledgable teacher anbd
-                        provides quality individual lessons. &quot;
-                      </CarouselItem>
-                      <CarouselItem>
-                        &quot;I've been taught by Bob for the past 10 years off
-                        and on. He's a patient, knowledgable teacher who manages
-                        to get the best out of my abilities and boost my
-                        confidence &quot;
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious className="p-4" />
-                    <CarouselNext className="p-4" />
-                  </Carousel>
-                </div>
-              </div> */}
             </div>
           </div>
           <div className="col-cool flex justify-center items-center">
@@ -146,11 +110,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="background-fade">
+      {/* <section className="background-fade">
         <div className="flex justify-center items-center">
           <img src={testImage} className="w-[600px] rounded" alt="" />
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

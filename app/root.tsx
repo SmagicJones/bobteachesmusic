@@ -15,6 +15,14 @@ import MobileNav from "./components/MobileNav";
 
 import { Toaster } from "sonner";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "~/components/ui/carousel";
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -41,7 +49,35 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <DesktopNav />
         <MobileNav />
         {children}
-        <footer></footer>
+        <footer>
+          <div className="flex justify-center items-center p-4">
+            <div className="w-[70%]">
+              <Carousel className=" w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    &quot;Learning is always fun, Bob likes to mix things up,
+                    generally we just have a really great time. Lessons pass so
+                    quickly but by the end I feel certain my skills have
+                    increased&quot;
+                  </CarouselItem>
+                  <CarouselItem>
+                    &quot;I have been a pupil of Bob for some time and I can
+                    hightly recommend his musicianship and teching techniques.
+                    He is very a knowledgable teacher anbd provides quality
+                    individual lessons. &quot;
+                  </CarouselItem>
+                  <CarouselItem>
+                    &quot;I've been taught by Bob for the past 10 years off and
+                    on. He's a patient, knowledgable teacher who manages to get
+                    the best out of my abilities and boost my confidence &quot;
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="p-4" />
+                <CarouselNext className="p-4" />
+              </Carousel>
+            </div>
+          </div>
+        </footer>
         <Toaster />
         <ScrollRestoration />
         <Scripts />

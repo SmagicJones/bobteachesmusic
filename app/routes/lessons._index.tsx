@@ -1,6 +1,6 @@
 import { Separator } from "~/components/ui/separator";
 import { Button } from "~/components/ui/button";
-import { Link } from "react-router";
+import { Link, type MetaFunction } from "react-router";
 
 import {
   Card,
@@ -12,6 +12,14 @@ import {
 } from "../components/ui/card";
 
 import { lessons, type Lesson } from "~/data/lesson";
+
+export const meta: MetaFunction = () => [
+  { title: "bobteachesmusic lessons Blackburn" },
+  {
+    name: "description",
+    content: "Music Lessons in Guitar, Bass, and Musicianship in Blackburn",
+  },
+];
 
 export default function Lessons() {
   return (

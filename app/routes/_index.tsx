@@ -1,4 +1,4 @@
-import { Link, useNavigation } from "react-router";
+import { Link, useNavigation, type MetaFunction } from "react-router";
 import { Button } from "~/components/ui/button";
 import testImage from "/images/header-image-mobile.jpg";
 import { Separator } from "~/components/ui/separator";
@@ -12,6 +12,14 @@ import {
   CardContent,
   CardFooter,
 } from "~/components/ui/card";
+
+export const meta: MetaFunction = () => [
+  { title: "bobteachesmusic lessons Blackburn" },
+  {
+    name: "description",
+    content: "Music Lessons in Guitar, Bass, and Musicianship in Blackburn",
+  },
+];
 
 export default function Home() {
   const navigation = useNavigation();

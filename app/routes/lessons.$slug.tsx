@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router";
+import { useLoaderData, type MetaFunction } from "react-router";
 import type { Route } from "../+types/root";
 import { lessons, type Lesson } from "~/data/lesson";
 import { Link } from "react-router";
@@ -11,6 +11,26 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
+
+export const meta: MetaFunction = ({ data }) => {
+  const lesson = data as Lesson | undefined;
+  if (!lesson) {
+    return [
+      { title: "Instrumental and Musicianship Lessons" },
+      {
+        name: "description",
+        content: "Lessons in Guitar, Bass and Musicianship",
+      },
+    ];
+  }
+  return [
+    { title: lesson.title },
+    {
+      name: "description",
+      content: lesson.intro,
+    },
+  ];
+};
 
 export default function Lesson() {
   const lesson = useLoaderData();

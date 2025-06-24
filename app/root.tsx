@@ -51,25 +51,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <footer>
           <div className="flex justify-center items-center p-4">
-            <div className="w-[70%]">
-              <Carousel className=" w-full">
+            <div className="w-[90%] pl-4 pr-4">
+              <Carousel className="w-full text-center">
                 <CarouselContent>
                   <CarouselItem>
                     &quot;Learning is always fun, Bob likes to mix things up,
                     generally we just have a really great time. Lessons pass so
                     quickly but by the end I feel certain my skills have
                     increased&quot;
+                    <h5 className="font-bold pt-2">Little Jimmy</h5>
                   </CarouselItem>
                   <CarouselItem>
                     &quot;I have been a pupil of Bob for some time and I can
                     hightly recommend his musicianship and teching techniques.
                     He is very a knowledgable teacher anbd provides quality
                     individual lessons. &quot;
+                    <h5 className="font-bold pt-2">Lee Walsh</h5>
                   </CarouselItem>
                   <CarouselItem>
                     &quot;I've been taught by Bob for the past 10 years off and
                     on. He's a patient, knowledgable teacher who manages to get
                     the best out of my abilities and boost my confidence &quot;
+                    <h5 className="font-bold pt-2">Rob Stockwell</h5>
                   </CarouselItem>
                 </CarouselContent>
                 <CarouselPrevious className="p-4" />

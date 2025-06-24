@@ -27,7 +27,7 @@ export default function LessonEnquiryForm() {
           <Form
             id="contact-form"
             method="post"
-            action="lesson-enquiry"
+            action="/lesson-enquiry"
             onSubmit={() => {
               toast("Thanks for the lesson enquiry", {
                 description: "We will have you up and running in no time",

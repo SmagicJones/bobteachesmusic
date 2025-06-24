@@ -133,7 +133,7 @@ export async function action({ request }: ActionFunctionArgs) {
             <p>They are interested in ${choice} lessons</p>
               </div>`,
     });
-    return redirect("/success");
+    return redirect("/lessons");
   } catch (err) {
     console.error("Failed to send email", err);
     return { success: false, error: "Failed to send" };

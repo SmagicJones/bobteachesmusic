@@ -33,7 +33,7 @@ export default function Home() {
   const navigation = useNavigation();
   const isNavigating = Boolean(navigation.location);
   return (
-    <main>
+    <main className="w-[100%]">
       <header className="bob-header">
         <div className="grid grid-cols-1 gap-4 p-2 h-[100%]">
           <div className="flex justify-center items-center">
@@ -79,10 +79,38 @@ export default function Home() {
               </p>
               <p className="pb-4">Just getting started? want some guidance?</p>
               <p>Want to learn the songs you love?</p>
-              <div className="p-4 m-4">
-                <Carousel className="w-[90%]">
-                  <CarouselContent>
-                    <CarouselItem className="basis-1/1">
+              <div className="flex justify-center items-center p-4">
+                <div className="w-[70%]">
+                  <Carousel>
+                    <CarouselContent>
+                      <CarouselItem>
+                        &quot;Learning is always fun, Bob likes to mix things
+                        up, generally we just have a really great time. Lessons
+                        pass so quickly but by the end I feel certain my skills
+                        have increased&quot;
+                      </CarouselItem>
+                      <CarouselItem>
+                        &quot;I have been a pupil of Bob for some time and I can
+                        hightly recommend his musicianship and teching
+                        techniques. He is very a knowledgable teacher anbd
+                        provides quality individual lessons. &quot;
+                      </CarouselItem>
+                      <CarouselItem>
+                        &quot;I've been taught by Bob for the past 10 years off
+                        and on. He's a patient, knowledgable teacher who manages
+                        to get the best out of my abilities and boost my
+                        confidence &quot;
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="p-4" />
+                    <CarouselNext className="p-4" />
+                  </Carousel>
+                </div>
+              </div>
+
+              {/* <Carousel className="relative w-[100%] overflow-hidden">
+                  <CarouselContent className="flex">
+                    <CarouselItem className="w-[100%]">
                       <blockquote className="mt-6 border-l-2 pl-6 italic">
                         &quot;Learning is always fun, Bob likes to mix things
                         up, generally we just have a really great time. Lessons
@@ -90,7 +118,7 @@ export default function Home() {
                         have increased&quot;
                       </blockquote>
                     </CarouselItem>
-                    <CarouselItem className="basis-1/1">
+                    <CarouselItem className="w-[100%]">
                       <blockquote className="mt-6 border-l-2 pl-6 italic">
                         &quot;I have been a pupil of Bob for some time and I can
                         hightly recommend his musicianship and teching
@@ -99,7 +127,7 @@ export default function Home() {
                         <h5>Lee Walsh</h5>
                       </blockquote>
                     </CarouselItem>
-                    <CarouselItem className="basis-1/1">
+                    <CarouselItem className="w-[100%]">
                       <blockquote className="mt-6 border-l-2 pl-6 italic">
                         &quot;I've been taught by Bob for the past 10 years off
                         and on. He's a patient, knowledgable teacher who manages
@@ -109,10 +137,9 @@ export default function Home() {
                       </blockquote>
                     </CarouselItem>
                   </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-              </div>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20" />
+                </Carousel> */}
             </div>
           </div>
           <div className="col-cool flex justify-center items-center">

@@ -49,10 +49,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <DesktopNav />
         <MobileNav />
         {children}
-        <footer>
+        <footer className="pt-2">
+          <h6 className="text-center text-2xl">Reviews</h6>
           <div className="flex justify-center items-center p-4">
             <div className="w-[90%] pl-4 pr-4">
-              <Carousel className="w-full text-center">
+              <Carousel className="w-full text-center ">
                 <CarouselContent>
                   <CarouselItem>
                     &quot;Learning is always fun, Bob likes to mix things up,

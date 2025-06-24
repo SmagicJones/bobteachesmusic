@@ -43,8 +43,17 @@ export const lessons: Lesson[] = [
     slug: "musicianship",
     intro:
       "Being a musician is about listening, learning, feeling - also understanding - explore music theory as well as practical musicianship",
-    content:
-      "<div><p>Ever wanted to improve your by ear playing? looking for more reference to recognisable patterns? what to get your head around music theory? you are in the right place</p></div>",
+    content: `<div>
+          <p>Ever wanted to improve your by ear playing? looking for more reference to recognisable patterns? what to get your head around music theory? you are in the right place</p>
+          <p>Lets explore things like</p>
+          <ul>
+            <li>Playing by ear</li>
+            <li>Learning Triads</li>
+            <li>Improvisation</li>
+            <li>Composition</li>
+          </ul>
+          
+          </div>`,
     img_url: "/images/musicianship.jpg",
     img_alt: "Guys in the air playing guitars with hair all over the place",
   },

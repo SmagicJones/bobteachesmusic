@@ -236,10 +236,18 @@ footer::after {
   padding: 2em;
 }
 
-img {
+/* img {
   animation: slideIn;
   animation-timeline: view();
   animation-range: 0% 50%;
+} */
+
+ul {
+  list-style-type: disc;
+  padding: 1em;
+}
+ul li {
+  padding-bottom: 1em;
 }
 
 .col-cool {

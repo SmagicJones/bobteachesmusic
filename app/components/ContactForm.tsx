@@ -37,9 +37,9 @@ export default function ContactForm() {
   return (
     <Card className="w-[100%]">
       <CardHeader>
-        <CardTitle>Make an enquiry</CardTitle>
+        <CardTitle>Get In Touch</CardTitle>
         <CardDescription>
-          Send me a message and lets get learning
+          Send us a message and we will get back to you
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -50,8 +50,7 @@ export default function ContactForm() {
           ref={formRef}
           onSubmit={() => {
             toast("Thanks for the message!", {
-              description:
-                "I look forward to reading it and getting back to you",
+              description: "we will be in touch soon",
               action: {
                 label: "home",
                 onClick: () => navigate("/"),

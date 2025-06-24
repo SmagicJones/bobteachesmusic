@@ -13,7 +13,7 @@ import {
 export default function Success() {
   return (
     <main className="flex justify-center items-center p-4">
-      <Card className="w-[70%]">
+      <Card className="lg:w-[70%]">
         <CardHeader>
           <CardTitle>Success!</CardTitle>
           <CardDescription>

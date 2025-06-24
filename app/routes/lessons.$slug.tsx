@@ -70,14 +70,19 @@ export default function Lesson() {
       </header>
 
       <section>
-        <div className="grid md:grid-cols-2 gap-4 m-2">
+        <div className="grid md:grid-cols-1 gap-4 m-2">
           <Card>
             <CardHeader>
               <CardTitle>{lesson.title}</CardTitle>
               <CardDescription>{lesson.subtitle}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p>
+              <div className="flex justify-center items-center">
+                <img src={lesson.img_url} className="rounded" />
+              </div>
+              <div className="grid gap-2 pt-2">
+                <p dangerouslySetInnerHTML={{ __html: lesson.content }}></p>
+              </div>
             </CardContent>
           </Card>
           <LessonEnquiryForm />

@@ -5,10 +5,15 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import DesktopNav from "./components/DesktopNav";
+import MobileNav from "./components/MobileNav";
+
+import { Toaster } from "sonner";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,7 +38,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <DesktopNav />
+        <MobileNav />
         {children}
+        <footer></footer>
+        <Toaster />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -42,7 +51,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
+  return (
+    <main>
+      {isNavigating ? (
+        <div className="flex justify-center items-center h-screen w-screen">
+          <div className="loading-spinner"></div>
+        </div>
+      ) : (
+        <Outlet />
+      )}
+    </main>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

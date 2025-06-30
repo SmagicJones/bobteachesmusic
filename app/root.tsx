@@ -44,6 +44,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script>
+  (function() {
+    try {
+      const isDark = localStorage.getItem('dark-mode');
+      if (
+        isDark === 'true' ||
+        (isDark === null && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {
+      // ignore errors (e.g. localStorage access denied)
+    }
+  })();
+</script>
       </head>
       <body>
         <DesktopNav />

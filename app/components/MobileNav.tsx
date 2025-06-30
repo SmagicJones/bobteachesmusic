@@ -82,9 +82,9 @@ export default function MobileNav() {
                   </li>
                 </ul>
               </DrawerHeader>
-              <div className="p-4">
+              {/* <div className="p-4">
                 <DarkModeToggle />
-              </div>
+              </div> */}
               <DrawerFooter>
                 <Link to="/contact">
                   <Button className="w-[100%]">Contact us</Button>

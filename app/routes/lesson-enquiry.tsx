@@ -131,7 +131,23 @@ export async function action({ request }: ActionFunctionArgs) {
       html: `<div>
             <p>${message}</p><p>From: ${name} (${email}) </p>
             <p>They are interested in ${choice} lessons</p>
-              </div>`,
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Lesson Choice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>${name}</td>
+                        <td>${choice}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+     </div>`,
     });
     return redirect("/lessons");
   } catch (err) {
